@@ -11,18 +11,22 @@ project(
     HOMEPAGE_URL "https://nafisayaz.github.io/espresso/doc.html"
 )
 
+add_subdirectory(
+    ${PROJECT_ROOT}/utilities/
+)
 
 add_subdirectory(
-    core/
+    ${PROJECT_ROOT}/core/
 )
     
 add_subdirectory(
-    ${PROJECT_ROOT}/Server_test/
+    ${PROJECT_ROOT}/tests/Server_test/
+)
+add_subdirectory(
+    ${PROJECT_ROOT}/tests/Client_test/
 )
 
-add_subdirectory(
-    ${PROJECT_ROOT}/Client_test/
-)
+
 
 # message("PROJECT_SOURCE_DIR===> = " ${PROJECT_SOURCE_DIR})
 # message("CMAKE_CURRENT_SOURCE_DIR ==>>>>>>> ", ${CMAKE_CURRENT_SOURCE_DIR})
